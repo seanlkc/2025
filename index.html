@@ -79,7 +79,7 @@
             width: 105%;
             height: 85%;
             left: -2px;
-            top: 0.1em;
+            top: 0.1em; 
             z-index: -1;
             transform: rotate(-1.5deg);
         }
@@ -185,10 +185,12 @@
         .focus-reveal-2s { filter: blur(20px); transform: scale(1.05); }
         .focus-reveal-2s.active { filter: blur(0); transform: scale(1); }
 
+        /* 優化導航欄：採用 Glassmorphism 以利融合 */
         .nav-editorial {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(20px);
-            border-bottom: 2px solid #000;
+            background: rgba(226, 226, 226, 0.7); /* 半透明背景 */
+            backdrop-filter: blur(15px); /* 背景模糊 */
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* 極細線條 */
             width: 100%;
             left: 0;
         }
@@ -198,11 +200,11 @@
             font-weight: 900; 
             letter-spacing: 0.25em;
             text-transform: uppercase;
-            color: #ffffff;
+            color: #000000; /* 改為黑色以配襯淺色 Bar */
         }
 
-        /* 右上角時間：白色字 */
-        .clock-data { color: #ffffff; font-weight: 900; }
+        /* 右上角時間 */
+        .clock-data { color: #000000; font-weight: 900; }
 
         .footer-tagline {
             font-weight: 900;
@@ -266,7 +268,7 @@
         </div>
     </header>
 
-    <!-- Section 2: Body Copy (移除分割線) -->
+    <!-- Section 2: Body Copy -->
     <section class="py-[50vh] flex flex-col items-center dynamic-padding overflow-hidden">
         <div class="max-w-4xl body-copy-style focus-reveal-2s">
             <p class="text-pretty text-center">
@@ -278,7 +280,7 @@
         </div>
     </section>
 
-    <!-- Section 3: Selected Works (移除分割線) -->
+    <!-- Section 3: Selected Works (12 Projects) -->
     <section id="projects" class="pb-0 dynamic-padding overflow-hidden text-left">
         <div class="reveal pt-20 flex flex-col items-center mb-[50vh]">
             <h2 class="title-monolith leading-none text-center">
@@ -458,7 +460,7 @@
         </div>
     </section>
 
-    <!-- Section 4: Philosophy & Experience (移除分割線) -->
+    <!-- Section 4: Philosophy & Experience -->
     <section id="about" class="pt-[25vh] pb-20 dynamic-padding overflow-hidden">
         <div class="reveal mb-[50vh] flex flex-col items-center">
             <h2 class="title-monolith text-center">STRATEGIC<br><span class="stroke-text">NARRATIVES.</span></h2>
@@ -516,7 +518,7 @@
         </div>
     </section>
 
-    <!-- Footer (移除分割線) -->
+    <!-- Footer -->
     <footer id="contact" class="py-60 text-center flex flex-col items-center overflow-hidden">
         <div class="reveal px-4 pb-12 text-center w-full">
             <h2 class="footer-tagline text-3xl md:text-[6.5rem] mb-16 leading-[0.85] text-black text-center text-pretty">
